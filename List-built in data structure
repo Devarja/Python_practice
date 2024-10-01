@@ -1,0 +1,55 @@
+1)what is list
+ans - 
+A list in Python is a mutable, ordered collection of items. Lists can hold elements of any data type, including other lists, 
+and they are one of the most commonly used data structures in Python.
+
+Key features of lists:
+Mutable: You can modify elements of a list after it is created (e.g., adding, removing, or changing elements).
+Ordered: The order in which you add items to a list is preserved.
+Heterogeneous: Lists can store elements of different data types.
+
+2)List functions
+ans - 
+#here we are going to discuss about list methods 
+list1=[1,2,3,4,4,5,0,1]
+#1 append() - returns none
+list1.append("hello")
+print(list1)
+
+# 2 clear() -removes all the elements from list
+list1.clear()
+print(list1)
+
+#3 copy() - returns a copy of list
+list2=["kl","virat","rohit","msd","kl"]
+list3=list2.copy()
+print(list3)
+
+#4 count() -returns the number of elments with the specified value
+print(list3.count("kl"))
+
+# 5 extend() - add elments or an itirable to the end of the list
+list3.extend(["pant"])
+print(list3)
+
+#6 index() - returns the index value of passed value
+print(list3.index("kl"))
+
+#7 insert( - insert the value to the particular index
+list3.insert(-1,"bumra")
+print(list3)
+
+#8 pop()-removes the value with the specified index and returns the value which has been poped out from the list
+print(list3.pop())
+
+#9 remove()-removes the specified value from the list
+list3.remove("virat") # returns none
+print(list3)
+
+#10 reverse()-reverse the oreder of the list
+list3.reverse() #returns none
+print(list3)
+
+#11 sort() -sort the value ascending order in the list and returns none
+list3.sort()
+print(list3)
