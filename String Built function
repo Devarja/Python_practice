@@ -1,0 +1,122 @@
+1)what is string
+ans - string is set of character
+
+2)string functions
+ans -
+# here we discuss about string methods
+str1="hey whats'up {} 145"
+x=str1.maketrans("hey","Huh")
+
+#1 capitalize() - returns the capitalized string 
+print(str1.capitalize())
+
+#2 casefold() - returns lowercased string
+print(str1.casefold())
+
+#3 center() - 
+print(str1.center(15,"#"))
+
+#4 count() - returns the number of ocuured value instring
+print(str1.count("h"))
+
+#5 endswith() - returns true if the string ends with the passed value
+print(str1.endswith("kl"))
+
+#6 find() - returns the index of passed value and if not present dosent raise an error
+print(str1.find("g"))
+
+#7 format() - returns the fully formated string with the passed value
+print(str1.format("man"))
+
+#8 index() - returns the index of passsed value if does'nt find it will raise an error
+# print(str1.index("h"))
+
+#9 isalnum() - returns true if the string is coposed of alphbet and number
+print(str1.isalnum())
+
+#10 
+print(str1.isascii())
+
+#11 isdecimal()-returns true if the value is decimal
+print(str1.isdecimal())
+
+#12 isdigit() -returns true if the string is a digit string
+print(str1.isdigit())
+
+#13 islower() -returns true if all the charchter in a string are lowercase
+print(str1.islower())
+
+#14 isnumeric - returns true if all the char in a string are numeric
+print(str1.isnumeric())
+
+#15 isspace() - returns true if the string is a whitespace
+print(str1.isspace())
+
+#16 istitle() -returns true if the each word of a first letter is capital"
+print(str1.istitle())
+
+#17 isupper() - returns true if all the char in string are capital
+print(str1.isupper())
+
+#18 join() -converts the iterable into string and returns string specified by the value u pass
+print(" ".join(["Be","curious","about","ur","work"]))
+
+#19 ljust() -returns the left justfied string with the char u pass
+print(str1.ljust(25,"$"))
+
+#20 lstrip() -returns string  by removing the leading spaces
+print(str1.lstrip())
+
+#21 maketrans() - replacing  the original value with the new value in string by
+print(str1.translate(x))
+
+#22 partition() -returns the tuple containing the string into three parts
+print(str1.partition("ak"))
+
+#23 removeprefix() - remove the string of passed value and returns returns the remaining string
+print(str1.removeprefix("he"))
+
+#24 removesuffix() -
+print(str1.removesuffix("hello"))
+
+#25 replace() -returns string with the replaced value
+print(str1.replace("hey","Hi",1))
+
+#26 rfind() - returns the index of the passed value
+print(str1.rfind("up"))
+
+#27 split() -returns list contained string seperated by passed value
+print(str1.split(","))
+
+#28 splitlines() -returns list containing string seperated by the endline
+print(str1.splitlines(keepends=True))
+
+#29 zfill() - returns the sring with the 0's in the left with the given width
+print(str1.zfill(30))
+
+#30 swapcase() - returns string with the upper into lower and lower into upperd string
+print(str1.swapcase())
+
+print(help(100))
+
+def add(li):
+    m=0
+    m+=li
+    return m
+k=map(add,[1,2,3,4,4])
+print(list(k))
+
+3)String formating
+ans
+i)f-strings (formatted string literals):
+code - 
+name = "Alice"
+age = 25
+greeting = f"My name is {name} and I am {age} years old."
+
+ii)format() Method:
+You can use curly braces {} as placeholders and fill them using .format().
+code -
+name = "Bob"
+greeting = "Hello, {}!".format(name)
+
