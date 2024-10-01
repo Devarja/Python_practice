@@ -1,0 +1,25 @@
+1)Conditional statements
+a)if statements
+b)else statements
+c)elif statements
+d)nested if statements
+e)Ternary Conditional Operator
+ex - num = 7
+result = "Even" if num % 2 == 0 else "Odd"
+print(result)
+
+2)Iterative statements
+ans - 
+a)for loop 
+ex - for i in range(10):
+       print(i)
+b)while loop
+ex - while(True):
+       a=10
+       if(a>1):
+          print(a)
+       else:
+          break
+3)Transfer statements
+ans - 
+i)pass,break and continue
