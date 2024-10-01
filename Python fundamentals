@@ -1,0 +1,37 @@
+1) Intruduction to python
+Ans - Python is a versatile and beginner-friendly programming language known for its readability and simplicity. 
+It’s widely used across various domains such as web development, data analysis, artificial intelligence, automation, and more.
+
+2)Python features and applications
+Ans - Readable and Simple Syntax
+Dynamically Typed
+Interpreted Language
+Cross-Platform Compatibility
+Rich Standard Library
+Object-Oriented and Functional Programming
+
+3)How to install python
+Ans - . Windows:
+Go to the official Python website.
+Download the latest version of Python.
+Run the installer and check the box that says "Add Python to PATH."
+Click "Install Now" and complete the installation process
+
+4)Hello world program in python
+code - print("Hello world")
+
+5)Integrated development Environment(IDE's) for python
+Ans - PyCharm
+VS Code (Visual Studio Code)
+Jupyter Notebook
+Spyder
+Sublime Text
+Atom
+IDLE (Integrated Development and Learning Environment)
+Thonny
+Eclipse with PyDev
+Anaconda Navigator (includes Jupyter and Spyder
+
+
+
+
