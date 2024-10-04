@@ -1,0 +1,23 @@
+1) what is Tuple
+ans - A tuple in Python is an ordered, immutable collection of items. Once created, its elements cannot be modified.
+
+2)Tuple features
+ans - ordered,immutable and heterogeneous 
+
+3)Tuple comprenshions
+ans - Tuple comprehensions don't exist in Python as a separate feature. 
+However, you can achieve something similar using generator expressions inside a tuple constructor.
+ex - # Using a generator expression inside tuple() to create a tuple
+my_tuple = tuple(x**2 for x in range(5))
+print(my_tuple)
+
+4)Tuple practice code
+ans -
+#tuple methods
+dream_team=("kl","warner","virat","chahal","s mavi","m nabi")
+# 1 count() -returns the total number of specified elements in the tuple
+print(dream_team.count("virat"))
+
+#2 
+print(dream_team.index("kl"))
+
