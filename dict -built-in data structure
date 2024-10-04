@@ -1,0 +1,101 @@
+1)What is dictionary?
+ans - A dictionary is a collection in programming (especially in Python) that stores data in key-value pairs. Each key is unique, 
+  and it’s used to access its corresponding value.
+2)Example 1: Basic Dictionary Comprehension
+Creating a dictionary where keys are numbers and values are their squares:
+code -
+squares = {x: x**2 for x in range(1, 6)}
+print(squares)  # Output: {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+3)dict-features
+  ans- unordered,mutable,allows duplicate
+
+4)dict-practice code
+ans - 
+# #sum of all the items in dictonary
+# dict1={"kl":1,"virat":55,"msd":100,"abd":90}
+# kl_score=[]
+# total_score=0
+# # kl_score=dict1.values()
+# # scores=list(kl_score)
+# # print(sum(scores))
+
+# for scores in dict1:
+#     kl_score.append(dict1[scores])
+#     total_score=sum(kl_score)
+# print(total_score)
+# #convert dict inot list then find out the length of the dictionary
+# list1=list(dict1)
+# print(len(list1))
+# import sys
+# print(sys.getsizeof(dict1))#retruns the values in the form of bytes
+# from operator import itemgetter
+# ipl_teams=[{"csk":5,"fanbase":"70k"},
+#            {"rcb":0,"fanbase":"68k"},
+#            {"mi":5,"fanbase":"67k"}]
+# print(sorted(ipl_teams,key=itemgetter("fanbase")))
+
+#merge two dictionaries
+# dict1={"kl":105,"virat":55,"rohit":35}
+# dict2={"surya":56,"rishab":12,"hardik":38}
+# dict1.update(dict2)
+# print(dict1)
+
+#problem 5 just finding out the common ellemnt in dictonary
+# dict1={"kl":105,"virat":55,"rohit":35}
+# dict2={"surya":56,"rishab":12,"hardik":38,"kl":105}
+# dict3={"jadeja":20,"aswin":12,"bumra":10,"kl":65}
+# list1=[1,2,3,4,5]
+# list2=[5,6,7,8]
+# list3=[5,9,0,11]
+# common_ele=[]
+# for common in dict1:
+#     if(common in dict2 and common in dict3):
+#         common_ele.append(common)
+# if(common_ele):
+#     print(common_ele)
+# else:
+#     print("no common elments amonng three lists")
+
+#problem 6
+#find out the key with maximum unique values
+# test_dict = {"Gfg" : [5, 7, 9, 4, 0], 
+#                      "is":[6, 7, 4, 3, 3],
+#                      "Best":[9, 9, 6, 5, 5]}
+# max_val=0
+# keys=None
+# for key in test_dict:
+#     unique=len(set(test_dict[key]))
+#     if unique>max_val:
+#         max_val=unique
+#         keyss=key
+# print(keyss)
+
+#problem 7
+#removeing the keys from the dictionary
+test_dict = {"Gfg" : [5, 7, 9, 4, 0], 
+                     "is":[6, 7, 4, 3, 3],
+                     "Best":[9, 9, 6, 5, 5]}
+dict1={"kl":35}
+test_dict.update(dict1)#It returns none
+# print(test_dict.popitem())
+# print(test_dict.pop("Gfg"))#returns in the form og list
+# print(test_dict.popitem()) #returns the value in the key-value in the form of tuple
+# print(test_dict.clear()) # it returns none
+dict2=test_dict.copy()#returns the exat key value pair of the created list
+print(dict2)
+dict3=dict.fromkeys({"virat","abd","msd"},"criekters")#it doesnot return anything
+print(dict3)
+print(dict3.get("virat")) #returns the value in the form of int,str or float accprding to the type of value which has been assigned to key
+print(dict3.keys()) #returns the keys in the form of tuple of list
+print(dict3.items()) #returns the keys and values in the form list conatining tuple
+dict3.setdefault("klr") # returns the dictionary 
+print(dict3)
+
+
+
+
+
+
+
+
