@@ -1,0 +1,100 @@
+1)what are functions
+ans - functions are a block of reusable code used to to perform specific task.
+ex - def add(a,b):
+        return a+b
+     print(add(12,10))
+output - 22
+
+2)What are the types of fucntions
+ans - 1.user defined functions
+      2.Built-in functions
+example for user defined functions
+a)add(a,b)
+example for built-in functions
+a)map(),filter()
+
+3)Parameters and arguments
+ans - parameters are variables that has been defined while defining function
+      while arguments are variable that has been defined while passing to the function when it is called
+4)Return statement
+ans - returns the type of value it is going to return
+
+5)Types of arguments
+ans -1.positional argument
+ it is like how it has been defined in the functions in the same way it has to be passed while calling the function 
+ex - add(a,b,c):
+      pass
+     add(a,b,c)
+
+    2.keyword argument
+ans - it is thing while passing to the function it has key value pair thing 
+ex - def fun(name,age):
+        pass
+     fun("name":"deva","age":23)
+    3.default argument
+ans - it is a thing where some of the value are already been initialized in function definition
+ex - def add(a=10,b,c):
+        pass
+     add(b=20,c=30)
+6)Types of variables
+ans - Global and Local variable
+GLobal variable - It is been initiated outside the function and it has global scope and it can been acessed from anywhere from the code
+Local variable -  It is been initiated inside the function and it has local scope and it can been acessed only inside the function
+
+7)Recursive Functions
+ans - It automatically calls the function untill the condition fails it is called the recursive function
+ex - def mul(a):
+      if(a>1):
+        return 2*mul(a-1)
+      else:
+        return 1
+    print(mul(5))
+
+8)Ananymous function
+ans - also called lambda function
+ex - k=lambda a,b:a*b
+     print(k(10,2))
+
+9)Filter function
+ans - numbers = [1, 2, 3, 4, 5, 6]
+
+# Filter even numbers using a lambda function
+even_numbers = list(filter(lambda num: num % 2 == 0, numbers))
+
+print(even_numbers)  # Outputs: [2, 4, 6]
+
+10)Map() function
+ans - numbers1 = [1, 2, 3]
+numbers2 = [4, 5, 6]
+
+# Add corresponding elements from both lists
+summed_numbers = list(map(lambda num: num % 2 == 0, numbers1, numbers2))
+
+print(summed_numbers)  # Outputs: [5, 7, 9]
+ 56 
+
+11)function aliasing
+ans - # Define a function
+def greet():
+    return "Hello!"
+
+# Create an alias for the function
+say_hello = greet
+
+# Now you can call the function using either the original name or the alias
+print(greet())       # Outputs: Hello!
+print(say_hello())   # Outputs: Hello!
+
+12)nested functions
+ans - def outer_function(name):
+    def inner_function():
+        return f"Hello, {name}!"
+    return inner_function  # Return the inner function, not its result
+
+# Assign the returned inner function to a variable
+greet = outer_function("Devaraja")
+
+# Call the returned inner function
+print(greet())  # Outputs: Hello, Devaraja!
+
+
