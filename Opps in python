@@ -1,0 +1,300 @@
+1)what is opps ?
+ans - 
+OOP (Object-Oriented Programming) is a way of organizing and structuring code to make it more reusable, scalable, and easier to understand
+
+2)what is Object -
+ans - Object is real world entity and it has both state and property
+
+3)what is self variable in python
+ans- In Python, the self variable is a reference to the current instance of the class. 
+It is used within class methods to access instance attributes and other methods of the same object.
+
+4)Constructor concepts in python
+ans - A constructor in Python is a special method used to initialize objects of a class when they are created. 
+It allows you to set up initial values for the object's attributes.
+
+5)What are the types of variables and its defintion?
+ans -  ther are three types of variables in python 1)instance variable 2)static variable and 3)Local variable
+1)Instance variable - An instance variable in Python is a variable that is specific to each object (or instance) of a class. 
+These variables are used to store data that belongs to an individual object, and each object can have different values for these variables.
+
+2)static variable
+ans - static variables are defined at the class level and are the same for all instances of that class. 
+This means any change to a static variable will be reflected across all instances of the class.
+
+3)Local variable
+ans - a local variable in Python is limited to the function or block where it is created, 
+ensuring that it does not affect or conflict with variables outside of that function.
+
+6)Types of methods
+ans - there are three types of methods in python 1)insatnce method 2)static method 3)class method
+1)instance method -  Operate on instances of a class, can access/modify instance variables, and require self as the first parameter.
+ex - class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    # Instance method
+    def bark(self):
+        print(f"{self.name} is barking!")
+
+dog1 = Dog("Buddy", 3)
+dog1.bark()  # Output: Buddy is barking!
+
+
+2)class methods - Operate on the class itself, can modify class variables, and use @classmethod and cls as the first parameter.
+ex - class Dog:
+    species = "Canine"  # Class variable (static variable)
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    @classmethod
+    def get_species(cls):
+        return cls.species
+
+print(Dog.get_species())  # Output: Canine
+
+
+
+3)static method - Behave like regular functions, don’t access instance or class variables, and use the @staticmethod decorator.
+ex - class MathOperations:
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+print(MathOperations.add(5, 10))  # Output: 15
+
+7)setter and getter methods in python
+ans - 
+Getter method: Used to retrieve the value of a private or protected attribute.
+Setter method: Used to set or modify the value of a private or protected
+
+8)inner classes
+ans - Inner classes in Python are classes defined within the body of another class.
+They can be used to logically group classes that are only used in one place, increase encapsulation, and make the code easier to read and maintain
+ex- class OuterClass:
+    def __init__(self, outer_value):
+        self.outer_value = outer_value  # Attribute of the outer class
+
+    class InnerClass:
+        def __init__(self, inner_value):
+            self.inner_value = inner_value  # Attribute of the inner class
+
+        def display(self):
+            print(f"Inner value: {self.inner_value}")
+
+    def display_outer(self):
+        print(f"Outer value: {self.outer_value}")
+
+# Creating an instance of the outer class
+outer_instance = OuterClass("Outer Value")
+
+# Accessing the outer class method
+outer_instance.display_outer()  # Output: Outer value: Outer Value
+
+# Creating an instance of the inner class
+inner_instance = OuterClass.InnerClass("Inner Value")
+
+# Accessing the inner class method
+inner_instance.display()  # Output: Inner value: Inner Value
+
+# Accessing inner class from outer instance
+inner_instance_outer = outer_instance.InnerClass("Another Inner Value")
+inner_instance_outer.display()  # Output: Inner value: Another Inner Value
+
+9)garbage collection 
+ans - Garbage collection in Python is the process of automatically managing memory by reclaiming the memory 
+occupied by objects that are no longer needed or referenced in the program. 
+This helps prevent memory leaks and optimizes memory usage, allowing for efficient resource management.
+
+10)Destructor in python
+ans - A destructor in Python is a special method that is called when an object is about to be destroyed or when it is no longer referenced. 
+The destructor allows you to define cleanup actions or release resources that the object may have been holding, such as closing files or network connections.
+
+ex-class Resource:
+    def __init__(self, name):
+        self.name = name
+        print(f"{self.name} acquired.")
+
+    def __del__(self):
+        print(f"{self.name} released.")
+
+# Creating an instance of the Resource class
+res = Resource("Resource1")
+
+# Deleting the instance
+del res  # Output: Resource1 released.
+
+# The destructor is called automatically when the object is deleted.
+
+11)Inheritence in python
+ex - Inheritance in Python is a fundamental concept in Object-Oriented Programming (OOP) that allows
+a class (called a child class or subclass) to inherit attributes and methods from another class (called a parent class or superclass)
+
+types of inheritence
+Single Inheritance: A subclass inherits from a single superclass.
+
+Multiple Inheritance: A subclass inherits from multiple superclasses.
+
+Multilevel Inheritance: A subclass inherits from a superclass, which is itself a subclass of another class (forming a chain).
+
+Hierarchical Inheritance: Multiple subclasses inherit from a single superclass.
+
+Hybrid Inheritance: A combination of two or more types of inheritance.
+
+12)Super() keyword in opps 
+ans - The super() keyword in Python is used to call methods and access properties from a parent or superclass within a subclass.
+It provides a way to refer to the parent class without explicitly naming it, which can be useful in multiple inheritance scenarios
+
+ex-class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        return "Animal speaks"
+
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name)  # Calls the __init__ method of the parent class
+        self.breed = breed
+
+    def speak(self):
+        return "Bark!"
+
+# Creating an instance of Dog
+dog = Dog("Buddy", "Golden Retriever")
+
+# Accessing the attributes
+print(dog.name)  # Output: Buddy (inherited from Animal)
+print(dog.breed)  # Output: Golden Retriever (specific to Dog)
+
+# Calling the speak method
+print(dog.speak())  # Output: Bark! (overridden method)
+
+13)polymorphism
+ans - polymorphism allows methods to do different things based on the object they are acting upon, even if they share the same name.
+
+types of polymorphism
+1)Method Overloading
+Method Overloading allows a class to have multiple methods with the same name but different parameter lists (number or type of parameters). 
+This means that you can define multiple versions of a method within the same class, enabling you to call the same method name with different arguments.
+
+ex-class MathOperations:
+    def add(self, a, b, c=0):  # Method with default parameter
+        return a + b + c
+
+# Creating an instance
+math_ops = MathOperations()
+
+# Calling the add method with different arguments
+print(math_ops.add(2, 3))       # Output: 5 (using two arguments)
+print(math_ops.add(2, 3, 4))    # Output: 9 (using three arguments)
+
+2)Method Overriding
+Method Overriding occurs when a subclass provides a specific implementation of a method that is already defined in its parent class.
+This allows the subclass to provide a behavior that is specific to it, effectively replacing the parent class’s implementation.
+
+ex-class Animal:
+    def speak(self):
+        return "Animal speaks"
+
+class Dog(Animal):
+    def speak(self):  # Overriding the speak method
+        return "Bark!"
+
+class Cat(Animal):
+    def speak(self):  # Overriding the speak method
+        return "Meow!"
+
+# Creating instances
+dog = Dog()
+cat = Cat()
+
+# Calling the speak method
+print(dog.speak())  # Output: Bark! (overridden method)
+print(cat.speak())  # Output: Meow! (overridden method)
+
+14)Abstract Method
+ans - An abstract method in Python is a method that is declared but contains no implementation. Abstract methods are defined in an abstract class, which serves as a blueprint for other classes. 
+This means that any subclass derived from the abstract class must implement the abstract method, providing its own specific behavior.
+ex-from abc import ABC, abstractmethod
+
+class Animal(ABC):  # Abstract class
+    @abstractmethod
+    def speak(self):  # Abstract method
+        pass  # No implementation here
+
+class Dog(Animal):  # Subclass
+    def speak(self):  # Implementing the abstract method
+        return "Bark!"
+
+class Cat(Animal):  # Subclass
+    def speak(self):  # Implementing the abstract method
+        return "Meow!"
+
+# Trying to instantiate an abstract class will raise an error
+# animal = Animal()  # This would raise TypeError
+
+# Creating instances of subclasses
+dog = Dog()
+cat = Cat()
+
+# Calling the implemented methods
+print(dog.speak())  # Output: Bark!
+print(cat.speak())  # Output: Meow!
+
+15)Abstract class
+anms - An abstract class in Python is a class that cannot be instantiated on its own and is meant to serve as a blueprint for other classes. 
+It can contain abstract methods (methods without implementation) that must be implemented by any subclass that inherits from the abstract class.
+Abstract classes are a key part of Object-Oriented Programming (OOP) and are used to define a common interface for a group of related classes.
+
+ex-from abc import ABC, abstractmethod
+
+class Shape(ABC):  # Abstract class
+    @abstractmethod
+    def area(self):  # Abstract method
+        pass
+
+    @abstractmethod
+    def perimeter(self):  # Another abstract method
+        pass
+
+class Rectangle(Shape):  # Subclass
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def area(self):  # Implementing abstract method
+        return self.width * self.height
+
+    def perimeter(self):  # Implementing abstract method
+        return 2 * (self.width + self.height)
+
+class Circle(Shape):  # Subclass
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):  # Implementing abstract method
+        return 3.14159 * (self.radius ** 2)
+
+    def perimeter(self):  # Implementing abstract method
+        return 2 * 3.14159 * self.radius
+
+# Trying to instantiate the abstract class will raise an error
+# shape = Shape()  # This would raise TypeError
+
+# Creating instances of subclasses
+rectangle = Rectangle(4, 5)
+circle = Circle(3)
+
+# Calling the implemented methods
+print(f"Rectangle Area: {rectangle.area()}")          # Output: Rectangle Area: 20
+print(f"Rectangle Perimeter: {rectangle.perimeter()}")  # Output: Rectangle Perimeter: 18
+print(f"Circle Area: {circle.area()}")                  # Output: Circle Area: 28.27431
+print(f"Circle Perimeter: {circle.perimeter()}")        # Output: Circle Perimeter: 18.84954
+
+16)Interface
+ans - An interface is a contract that specifies a set of methods that implementing classes must define. 
+In Python, this concept can be implemented using abstract classes from the abc module, allowing you to enforce a certain structure while maintaining flexibility in implementation.
