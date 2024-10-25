@@ -266,4 +266,98 @@ print(obj1.a)
 # private member of base class
 # is called inside derived class
 
+7)Types of Variables
+i)Instance variable - defined inside the methods which start with self as their first parameter.
+ex - class A:
+       def __init__(self):
+          self.name="dk"
+          self.brand="kd"
+ii)Class or static varible - defined before the constructor or after the class delcaration of class variable.
+ex - class A:
+       abc="Alphabet"
+       def __init__(self):
+         self.total=26
+iii)Local variable - variables it is defined inside the function only and it has block scope.
+ex - def function:
+       a=10 #local variable
+
+8)Types of methods
+i)static method or class method - it has first like "cls" and it can only static variable.
+ex - class A:
+       val=10
+       def val(cls,a): #static method
+          cls.val+=1
+ii)instance method - its first parameter as self while creating method.
+ex - class A:
+       def add(self,a): #instance method
+         c=a+a
+
+8)setters and getters
+in three main ways we can achive this
+i)one is by normal function
+ex- 
+class Animal:
+   def __init__(self):
+      self.name="DOg"
+   #getter metod
+   def get_name(self):
+      return self._name
+   def set_name(self,x):
+      self._name=x
+   def del_name(self):
+      del self._name
+ani=Animal()
+#set the name
+ani.name="puppy"
+#get the name
+print(ani.get_name())
+#delete the name
+print(ani.del_name())
+
+ii)by using property method
+ex-
+
+class Animal:
+   def __init__(self):
+      self.name="DOg"
+   #getter metod
+   def get_name(self):
+      return self._name
+   def set_name(self,x):
+      self._name=x
+   def del_name(self):
+      del self._name
+   #by using property method
+   name=poperty(get_name,set_name,del_name)
+ani=Animal()
+#set the name
+ani.name="puppy"
+#get the name
+print(ani.get_name())
+#delete the name
+print(ani.del_name())
+
+iii) By using the property decorater
+ex - 
+
+class Animal:
+   def __init__(self):
+      self.name="DOg"
+   #getter metod
+   @property
+   def get_name(self):
+      return self._name
+   #to set the name
+   @property.setter
+   def set_name(self,x):
+      self._name=x
+ani=Animal()
+#set the name
+ani.name="puppy"
+#get the name
+print(ani.get_name())
+         
+
+       
+
 
