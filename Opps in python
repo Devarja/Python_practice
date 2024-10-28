@@ -356,6 +356,125 @@ ani=Animal()
 ani.name="puppy"
 #get the name
 print(ani.get_name())
+
+9)Inner class
+Class inside a class is called Inner class.helps to hide the inner code not widley usable.
+class A:
+  def __init__(self):
+    self.name="devaraja"
+    self.a=10
+    self.b=self.B()
+  def add(self,a):
+     k=a+a
+     return k
+  class B:
+     def __init__(self):
+         self.zindagi="my-life"
+     def bad(self,b):
+       return 10+b
+a=A()
+c=a.b
+print(a.add(5))
+print(c.bad(10))
+
+10)Garbage collection -
+Ans - Python uses two strategies for memory allocation: 
+
+Reference counting
+Garbage collection
+
+def - Garbage collection is a memory management technique used in programming languages to automatically reclaim memory that is no longer accessible or in use by the application.
+i)Automatic garbage collection.
+here we import the gc module
+import gc
+print("the thresold value : ",gc.get_thresold())
+
+output - The thresold value - (700,10,10)
+Here, the default threshold on the above system is 700. This means when the number of allocations vs. 
+the number of deallocations is greater than 700 the automatic garbage collector will run. 
+Thus any portion of your code which frees up large blocks of memory is a good candidate for running manual garbage collection. 
+
+ii)Manual Garbage collection
+ans - 
+#manual garbage collection using cyclic order
+import gc
+i=0
+def cyclic():
+ x={}
+ x[i+1]=x
+ print(x)
+
+collect=gc.collect()
+print("Befor the cyclic method : ",collect)
+
+for i in range(10):
+    cyclic()
+collect=gc.collect()
+print("Afetr the cyclic method : ",collect)
+
+There are two ways for performing manual garbage collection: time-based and event-based garbage collection. 
+
+Time-based garbage collection is simple: the garbage collector is called after a fixed time interval. 
+Event-based garbage collection calls the garbage collector on event occurrence. 
+For example, when a user exits the application or when the application enters into an idle state. 
+
+iii)Forced garbage collection
+import gc
+
+# Create some objects
+obj1 = [1, 2, 3]
+obj2 = {"a": 1, "b": 2}
+obj3 = "Hello, world!"
+
+# Delete references to objects
+del obj1
+del obj2
+del obj3
+
+# Force a garbage collection
+gc.collect()
+
+iv)set thresold value
+
+import gc
+gc.set_threshold(50,5,6)
+coll=gc.get_threshold()
+print(coll)
+
+v)import gc
+
+# Disable the garbage collector
+gc.disable()
+
+# Enable the garbage collector
+gc.enable()
+
+11)Destructor
+ans -The __del__() method is a known as a destructor method in Python. 
+It is called when all references to the object have been deleted i.e when an object is garbage collected. 
+ ex-  class A:
+        def __init__(Self):
+           self.name="devara"
+        def __del__(self):
+           print("destructor is called")
+      obj=A()
+      del obj
+12)Interface
+ans - Interface is a collection method signature by the class which implements it.
+Interface acts as blueprint for the class.
+zope is pacakege and interface.
+In python, interface is defined using python class statements and is a subclass of
+interface.Interface which is the parent interface for all interfaces.
+synatx :
+import zope.interface
+class class_name(zope.interface.Interface):
+    #methods and attribute
+to implement a interface in class we need a implemneter decorater.\
+ex - 
+
+
+ 
+
          
 
        
