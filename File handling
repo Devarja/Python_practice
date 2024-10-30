@@ -1,0 +1,48 @@
+1)What is file handling
+ans -  just working the operation like read,write and append operation any kind of file is called file handling.
+it is bit slower python compared to other programing languges
+ advantage of file handling
+i)Versatility - it can perofrm many operation on files like read,write and append or create,rename etc.
+ii)flexibility - it is flexible like it can work on all kind of file formates like(txt,csv,bin).
+iii)freindly - because it provides a easy to use to interface for users.
+iv)cross-platform - it can work in any of the os like(windwos,linux,mac).
+
+sytax for file handling
+ f=open(filename,mode)
+ii)Some of the mode operation that we can perofrm on files are below.
+i) r - we can read the file which is already been exist
+ii)w - it can overide the the file and if file not exist it will creat it.
+iii)a - append the txt and does not overide the information.
+iv)r+ - it can do both read and write but does not overide the file.
+v)w+ - it can do bothe write and read but it truncate the file to 0 length and overide it.
+vi)a+ - it can read a file and does not overide it.
+
+i)Read operation .
+ex -1 : 
+1)f=open("abc.txt","w")
+f.wirte("Hello good morning")
+f.write("how are you")
+f.close()
+c=open("abc.txt","r")
+print(c.read())
+
+2)2nd way of doing it is
+with open("abc.txt","r") as f:
+    print(f.read())
+
+3)3rd way of reading the file
+f=open("abc.txt","r")
+for word in f:
+    print(word)
+
+ii)Write operation
+1)f=open("abc.txt","w")
+f.write("What u are planing for weekend")
+
+2)with open("abc.txt","w") as f:
+            f.write("write anything")
+
+iii)append operation - it can append infromation to exstining tfile and don't overide
+1)f=open("abc.txt","a")
+      f.append("This is append operation")
+
