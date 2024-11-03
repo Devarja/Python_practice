@@ -1,0 +1,25 @@
+1)what is decoraters?
+ans - By using the decorater you can change the behaviour of the function or class.
+so below i will demonstrate it with the ex
+ex -  code
+so here i have created the div function where a is less than b so what users ask me to do is the nominater should always be greater than
+the denometer however i pass the parameter it should be negligible.so you have defined the function div and u should not touch div function again.
+The task is how do you change the function without entering to this function so here decorater comes into the picture.
+def div(a,b):
+  print(a/b)
+
+def smartdiv(func):
+    def inner(a,b):
+        if a<b:
+            a,b=b,a
+            return func(a,b)
+    return inner
+div=smartdiv(div)
+div(2,4)
+
+2)before know the decorater need tp know some of the thing is that first class object.
+it has some features.
+i)functioin is an instance of a object.
+ii)function can be stored in a variable.
+iii)function can return another function.
+iv)function call another function.
