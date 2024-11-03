@@ -1,0 +1,64 @@
+1)What is regular expression
+def -  matching of text with the reqular expression or statement is called regular expression.
+ex - 
+import re
+match=re.search(r"hello","hello devaraja what are u you doing there.")
+print(match)
+print(match.start())
+print(match.end())
+
+2)some of the metaclasses are been used to find out pattern below they are you can see.
+i) ^ -  it represents the starting index of the matched pattern.
+ii)$ - it represents the ending charcterof the matched pattern.
+iii)[] - it represents the set of charchter. 
+iv)? - zero or one occurence of charcter.
+v)* - one or more occurence of charcter(including zero)
+vi)+ - Matches zero or one occurrence
+vii)\ - Used to drop the special meaning of character following it
+viii). - Matches any character except newline.
+ix){} - Indicate the number of occurrences of a preceding RegEx to match.
+x)() - Encloses a group of regular expression.
+
+3)Why regular expression.
+def - 
+1)datamining - to search the required data immediatly in a file or in a group of data.
+2)data validation - data validation can be done using the match and regular expression.
+
+4)Let’s understand some of the basic regular expressions. They are as follows:
+
+Character Classes
+Rangers
+Negation
+Shortcuts
+Beginning and End of String
+Any Character
+
+ex-code
+i)character class
+import re
+print(re.search(r"ab[c]","can u see me"))
+#output - it will print out the range of indexes and and the matching pattern
+
+ii)range class
+import re
+print(re.search(r"[a-z A-Z]","case"))
+
+iii)multiple class
+ex - code
+
+import re
+
+print(re.search(r"ca*","this case is "))
+
+iv)addition class 
+import re
+print(re.search(r"abc+,"learn abcd"))
+
+v)negation character.
+ex - code
+negatining the character.
+import re 
+print(re.search(r'G[^e]', 'Geeks Gme')) 
+# here in this code u can mathc the charcter G after any other char is okay except e so in the output u can ecpect the "Gm".
+
+
