@@ -1,2 +1,70 @@
 1)What is MultiThreading 
-ans - 
+ans - running of multiple threads in at a time is called multihtreading.
+
+2)what is thread?
+ans -  thread is a set of code
+
+3)Here i will demonstrate creation of thread
+ex -  code
+import threading
+def add(a,b):
+  print(a+b)
+def mul(a,b):
+  print(a*b)
+#creation of thread
+t1=threading.Thread(target=add,arg=(2,3))
+t2=threading.Thread(target=mul,arg=(2,3))
+#starting of thread
+t1.start()
+t2.start()
+#stop the execution of thread using the join method
+t1.join()
+t2.join()
+
+4)isalive() method is used to check whether the thread is alive or not.
+
+5)What is daemon threads?
+ans -  daemon threads are the threads which will be running in the background and it gets terminated when the main 
+thread get therminates.
+for example -code
+import threading
+import time
+def work():
+  print("work for urself")
+def run():
+  print("run 1 km daily to maintain good health")
+#creating the thread
+t1=threading.Thread(target=work)
+#creatin daemon thread
+t1.daemon=True
+t1.start()
+#i will make the main thread to sleep for 3 sec
+time.sleep()
+print("main thread terminated")
+
+6)synchronization
+ans - it is used to maintain threads when all the threads are trying to acces the same shared resources(variables,files,
+datastructurs at a time)
+which can be done by using 2-3 ways i.e - lock method,seamaphore,Event.
+using lock method demonstarting the synchronization.
+ex -code
+
+import threading
+#shared resource
+counter=0
+lock=threading.Lock()
+def increament():
+  global counter
+  for _ in range(5):
+        lock.acquire()
+        counter+=1
+        lock.release()
+
+threads=[]
+for i in range(10):
+  thread=threading.Thread(target=increament)
+  threads.append(thread)
+  thread.start()
+for t in threads:
+    t.join()
+print(counter)
