@@ -1,5 +1,6 @@
 1)what is generators?
-def -  Generators are used to acces the things one at a time inside the funciton acts as a iterator.
+def -  Generators are used to acces the things one at a time using the yeild keyword inside the funciton acts as a iterator.
+if the body of the function contains the yeild keyword then we call it has generator function.
 ex - I can demonstrate the generator example below.
 #generators
 def topten():
@@ -11,3 +12,29 @@ def topten():
 t=topten()
 for i in t:
     print(i)
+
+2)second example for generators
+ex - creating simple generator and object for this.
+def simpleGenerator():
+    yield "x"
+    yield "y"
+    yield "z"
+obj=simpleGenerator()
+for val in obj:
+    print(val)
+#we can acces the val using the generaptr next method also
+print(next(yield))
+print(next(yield))
+print(next(yield))
+3)Python generator expression.
+ans -  we can write generator function as list comprension but here we are going to create an oject for this.
+code 
+generator_exp=(i*5 for i in range(5) if i%2==0)
+for val in generator_exp:
+    print(val)
+
+3)Applications of Generators in Python 
+Suppose we create a stream of Fibonacci numbers, adopting the generator approach makes it trivial;
+we just have to call next(x) to get the next Fibonacci number without bothering about where or when the stream of numbers ends. A more practical type of stream processing is handling large data files such as log files.
+Generators provide a space-efficient method for such data processing as only parts of the file are handled at one given point in time.
+We can also use Iterators for these purposes, but Generator provides a quick way (We don’t need to write __next__ and __iter__ methods here).
