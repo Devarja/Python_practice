@@ -1,0 +1,32 @@
+1)what is logging
+ans -  It is a process used to record the events of some software which is running.
+
+2)Key Points on Python's Logging Module:
+The logging module in Python provides a flexible framework for logging messages from your code.
+You can define multiple levels of logging (e.g., DEBUG, INFO, WARNING, ERROR, CRITICAL) to categorize log messages.
+You can configure different output destinations, such as the console, files, or even remote servers.
+Using logging effectively can make your code much easier to maintain, debug, and optimize.
+
+3)Advantages of logging module
+ans - 1)it is used to track the all the events of application so that we can undestand wherever the erro came and what happened exactly while 
+building the application nd the recorded logging files can be used while buliding the same apllication again and we can avoid errors.
+
+4)The levels of logging.
+i) debug - It is used to get the detailed information by configuration.(numeric value is 10)
+ii) info - It is used to check whether the things working as expected.numeric value is 20)
+iii) warning - it updates us that something is not working as expected.numeric value is 30)
+iv) error - it updates that some error occured.(numeric value is 40)
+v) critical - it updates us that some program itself not working properly.(numeric value is 50)
+
+4)example of creating log files.
+ex - code
+import logging
+logging.basicConfig(filename="abc.log",level=logging.DEBUG)
+logging.debug("I have all the information")
+logging.info("The things are working as expected")
+logging.warning("something is not working as expected")
+logging.error("some error occured")
+logging.critical("program is not running properly")
+
+5)The format of the log files in the console
+level of the logging : name :message
