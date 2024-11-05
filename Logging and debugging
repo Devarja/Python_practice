@@ -30,3 +30,7 @@ logging.critical("program is not running properly")
 
 5)The format of the log files in the console
 level of the logging : name :message
+
+6)what is debuging
+ans - It is just simple that finding erros and issues in the program and fix those using proper tools of debugging.
+
