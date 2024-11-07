@@ -1,0 +1,37 @@
+1)What is testing
+ans - Testing is a proces used to test the functionality of a software.
+
+2)What is unit testing?
+ans - It is a built-in framework used to check the functionality of program in systemetic and standard way.
+
+2)Why do you choose unittesting framework particularly even though we are having several framework?
+ans - Because it gives the many tools for testing
+ii)no additonal installation of dependencies are needed.
+iii)easy to use.
+
+3)some of the assertion method which are been there in unittest framework.
+ans - below u can see some of them.
+i).assertEqual(a,b) - used to check whether a euals b or not
+ii).assertTrue - checks the boolen value whether it is true or not.
+iii).assertIsInstance(a,b) - checks whether a is instance of class b.
+iv).assertIsUpper(x) - cheks whether x is uper value or not.
+
+4)steps to create test case for some of the program are below.
+step 1 - first import the unittest library.
+step 2 - create a class and that class shold inerhit the property of class TestClass.
+step 3 - mention the methods inside the class that you want to test.
+
+ex -  code
+import unittest
+def add(a,b):
+  return a+b
+class TestCase(unittest.TestCase):
+  def postive_nums_add(self):
+      self.assertEqual(add(1,2),3)
+  def negative_nums_add(self):
+      self.assertEqual(add(-1,-2),-3)
+  def mixed_nums_add(self):
+      self.assertEqual(add(-1,2),1)
+      self.assertEqual(add(1,-2),-1)
+if __name__=="__main__":
+  unittest.main()
