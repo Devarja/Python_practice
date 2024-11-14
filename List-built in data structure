@@ -1,7 +1,6 @@
 1)what is list
-ans - 
-A list in Python is a mutable, ordered collection of items. Lists can hold elements of any data type, including other lists, 
-and they are one of the most commonly used data structures in Python.
+ans - A list Built-in datastructure in python used to store many elements of regardless datatypes.
+and it has three main features 1)mutability 2)ordered collections 3)Allows duplicate values
 
 Key features of lists:
 Mutable: You can modify elements of a list after it is created (e.g., adding, removing, or changing elements).
