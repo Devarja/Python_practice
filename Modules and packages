@@ -1,7 +1,34 @@
 1)what is module
-ans - module is a set of functions and variable defined inside python file and you can import when it is needed
- and it is been created with the extension .py
+ans -
+A module is a single Python file (.py) that contains Python code such as functions, classes, and variables.
+Modules are used to logically organize code for better reuse and maintainability.
+ex - abc.py
 
 2)what is Pacakge
-ans - package is group of modules is called packages
-and it is like folder inside python code
+ans -
+A package is a collection of modules organized in a directory structure.
+A package must contain an __init__.py file (which can be empty or contain initialization code).
+This file signals to Python that the directory should be treated as a package.
+ex -
+structure of packages in python.
+my_package/
+├── __init__.py
+├── module1.py
+└── module2.py
+
+3)What is library
+ans - 
+A library is a collection of modules and packages that provide pre-written functionality for common tasks.
+Libraries are often more comprehensive than single modules or packages.
+In Python, libraries can be built-in (like os, math, or sys) or third-party (like requests, numpy, or pandas).
+ex - 
+import math
+print(math.sqrt(16))  # Output: 4.0
+
+4)What is framework in python
+ans -
+A framework in Python is a collection of pre-written code, tools, and libraries designed to provide a foundation for building specific types of applications.
+Frameworks help developers by offering ready-made solutions for common functionalities, 
+allowing them to focus on the unique aspects of their projects rather than reinventing the wheel.
+
+
