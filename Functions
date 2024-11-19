@@ -14,10 +14,10 @@ example for built-in functions
 a)map(),filter()
 
 3)Parameters and arguments
-ans - parameters are variables that has been defined while defining function
-      while arguments are variable that has been defined while passing to the function when it is called
+ans - parameters are variables that had been defined while defining function.
+      while arguments are variable that had been passed while calling function.
 4)Return statement
-ans - returns the type of value it is going to return
+ans - to return the value.
 
 5)Types of arguments
 ans -1.positional argument
@@ -86,7 +86,8 @@ print(greet())       # Outputs: Hello!
 print(say_hello())   # Outputs: Hello!
 
 12)nested functions
-ans - def outer_function(name):
+ans -
+def outer_function(name):
     def inner_function():
         return f"Hello, {name}!"
     return inner_function  # Return the inner function, not its result
