@@ -229,7 +229,7 @@ print("Accessing protected member of obj1: ", obj1._a)
 # Accessing the protected variable outside
 print("Accessing protected member of obj2: ", obj2._a)
 
-2.private member - here the variable can be accesed inside the class and its child class but not outside the class.
+2.private member - here the variable can be accesed inside the class only not on its child class and outside the class.
 The convention for this protected member is giving one __ to a variable like(__a).
 ex -
 # Python program to
@@ -282,7 +282,7 @@ ex - def function:
        a=10 #local variable
 
 8)Types of methods
-i)static method or class method - it has first like "cls" and it can only static variable.
+i)static method or class method - it has first parameter like "cls" and it can only  static variable.
 ex - class A:
        val=10
        def val(cls,a): #static method
