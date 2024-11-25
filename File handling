@@ -44,7 +44,7 @@ f.write("What u are planing for weekend")
 
 iii)append operation - it can append infromation to exstining tfile and don't overide
 1)f=open("abc.txt","a")
-      f.append("This is append operation")
+      f.write("This is append operation")
 
 2)To check the fild does exist or not
 1st method
