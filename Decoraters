@@ -23,3 +23,22 @@ i)functioin is an instance of a object.
 ii)function can be stored in a variable.
 iii)function can return another function.
 iv)function call another function.
+
+3)examples for creating decoraters in python
+#decoraters in python
+
+def order_eat(func):
+    def order():
+        print("I will order some food today")
+        func()
+        print("after eating i will sleep")
+    return order
+@order_eat
+def eat():
+    print("I will eat some rice")
+# e=order_eat(eat)
+@order_eat
+def run():
+    print("i will run and take the order")
+eat()
+run()
